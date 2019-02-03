@@ -15,6 +15,10 @@ def download_file(url, path):
     return True
 
 
+def get_ext(path):
+    return os.path.splitext(path)[-1]
+
+
 def get_files_path_from_dir(path):
     for root, _, files in os.walk(path):
         for file in files:
