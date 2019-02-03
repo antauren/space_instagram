@@ -19,3 +19,7 @@ def upload_photo_to_instagram(img_dir):
 
     for img in image_files:
         bot.upload_photo(img)
+
+
+if __name__ == '__main__':
+    upload_photo_to_instagram('images')

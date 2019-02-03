@@ -1,14 +1,7 @@
 import os
 import requests
 
-from utils import download_file
-
-COLLECTIONS = ["holiday_cards",
-               "wallpaper",
-               "spacecraft",
-               "news",
-               "printshop",
-               "stsci_gallery"]
+from utils import download_file, get_ext
 
 
 def fetch_hubble_collection(collection, dir_path):
@@ -33,7 +26,11 @@ def fetch_hubble_image(image_id, dir_path):
 
     file_url = response.json()['image_files'][-1]['file_url']
 
-    ext = os.path.splitext(file_url)[-1]
+    ext = get_ext(file_url)
     path = os.path.join(dir_path, 'hubble_img_{}{}'.format(image_id, ext))
 
     download_file(file_url, path)
+
+
+if __name__ == '__main__':
+    fetch_hubble_collection('wallpaper', 'images')
