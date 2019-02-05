@@ -6,8 +6,7 @@ def download_file(url, path):
     response = requests.get(url)
 
     if not response.ok:
-        print('Ошибка:', response.status_code)
-        return None
+        response.raise_for_status()
 
     with open(path, 'wb') as file:
         file.write(response.content)
