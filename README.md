@@ -2,7 +2,7 @@
 
 * скрипт ```fetch_spacex.py``` собирает фотографии космоса сделанные SpaceX
 * скрипт ```fetch_hubble.py``` собирает фотографии космоса сделанные Hubble
-* скрипт ```upload_photo_to_instagram.py``` выкладывает скаченные фотографии в Instagram
+* скрипт ```upload_photo_to_instagram.py``` выкладывает скачанные фотографии в Instagram
 
 ### Как установить
 
