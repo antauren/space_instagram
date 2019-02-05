@@ -15,8 +15,8 @@ def get_collection_ids(collection):
 
     response = requests.request('GET', 'http://hubblesite.org/api/v3/images/', params=params)
 
-    for i in response.json():
-        yield i['id']
+    for image_dict in response.json():
+        yield image_dict['id']
 
 
 def fetch_hubble_image(image_id, dir_path):
