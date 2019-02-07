@@ -8,8 +8,8 @@ def download_file(url, path):
     if not response.ok:
         response.raise_for_status()
 
-    with open(path, 'wb') as file:
-        file.write(response.content)
+    with open(path, 'wb') as file_:
+        file_.write(response.content)
 
     return True
 
@@ -20,5 +20,5 @@ def get_ext(path):
 
 def get_files_path_from_dir(path):
     for root, _, files in os.walk(path):
-        for file in files:
-            yield os.path.join(root, file)
+        for file_ in files:
+            yield os.path.join(root, file_)
