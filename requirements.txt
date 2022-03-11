@@ -1,4 +1,4 @@
 dotenv==0.0.5
 instabot==0.17.0
-Pillow==6.2.0
+Pillow==9.0.1
 requests==2.21.0
